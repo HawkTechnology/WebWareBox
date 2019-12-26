@@ -1,0 +1,5 @@
+src/core
+--------
+The src/core Directory is the Directory where all Scripts that are essential for the Software to function are stored. There are no other Directories here.
+
+PLEASE DO NOT (RE)MOVE OR DELETE ANYTHING THAT'S IN HERE AS IT WILL MOST LIKELY BE IMPORTANT.

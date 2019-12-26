@@ -1,0 +1,3 @@
+theme/css/
+----------
+This is the theme/css Directory. It stores all of the CSS(.css) Files for the Software. All Web-Pages have their own CSS File but the code in one CSS File, will definitely be shared with other CSS Files in an effort to make everything consistent.

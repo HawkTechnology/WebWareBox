@@ -1,0 +1,5 @@
+theme/box_icons_v1/
+-------------------
+This is the theme/box_icons_v1 Directory. Here, this Directory stores all of the 'Box-Icons'. Box-Icons are a custom Icon-Theme for WebBox that is used throughout the whole Software.
+
+All Icons are .png and have a transparent background. The Icons are also all [32x32], [64x64] and [128x128].

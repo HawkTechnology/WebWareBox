@@ -1,0 +1,5 @@
+assets/scripts/
+---------------
+This is the assets/scripts Directory. This Directory contains the Directories for JavaScript and PHP Files. Any Scripts with .js or .php should be put into their respective Directories.
+
+NOTE: PLEASE DO NOT PUT ANY SCRIPTS INTO THIS DIRECTORY. AS STATED, PLEASE PUT THEM INTO THEIR RESPECTIVE FOLDERS.

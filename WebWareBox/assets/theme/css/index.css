@@ -1,0 +1,52 @@
+/*
+ * Copyright belongs to: Oxygen-Software since <28/09/2019>
+ *
+ * This Program is Licensed under the OSPL(Oxygen-Software-Public-License) - V1.0.0(19/09/2019).
+ * To learn more about the License, please visit: https://oxygen-software.github.io/license.html
+*/
+/*
+ * File: index.css(src/assets/theme/css)
+ *
+ * This is the CSS File for index.css. It controls the look of the index.php Page in the WebBox Software. index.css does not control any other
+ * Page and any other CSS Element that is not in here, may be in site.css(src/assets/theme/css) or inside another <page>.css File.
+*/
+
+/* CSS Settings for the Other-Panel */
+.Other-Panel {
+     /* Set the Background-Colour and Border */
+     background-color: #F5F5F5;
+     border: 1px solid black;
+     border-radius: 20px 20px 5px 5px;
+     box-shadow: 0px 3px 15px; /* Add a Drop-Shaodow to the Panel */
+     /* Adjust the Width */
+     width: 7%;
+     /* Position the Panel */
+     position: fixed;
+     left: 625px;
+     /* Align the content in the middle of the Panel */
+     text-align: center;
+}
+
+/* CSS Settings for the Category-Panel on the Homepage */
+.Category-Panel_Home {
+     /* Set the Background-Colour and Border */
+     background-color: #F5F5F5;
+     border: 1px solid black;
+     border-radius: 20px 20px 5px 5px;
+     box-shadow: 0px 3px 15px; /* Add a Drop-Shaodow to the Panel */
+     /* Adjust the Width */
+     width: 25%;
+     /* Position the Panel */
+     position: fixed;
+     right: 650px;
+     /* Align the content in the middle of the Panel */
+     text-align: center;
+}
+
+/* CSS for the Lists on the Category-Panel on the Homepage */
+.Category-Panel_Home ul {
+     list-style: none; /* Get rid of the Bullets */
+     padding: 2;
+     text-align: left;
+     float: left;
+}

@@ -1,0 +1,5 @@
+scripts/js/
+-----------
+This is the scripts/js Directory. It contains all of the JavaScript Files that add certain Features and Functionality to the Software.
+
+NOTE: ONLY PUT FILES ENDING WITH .js IN THIS DIRECTORY.

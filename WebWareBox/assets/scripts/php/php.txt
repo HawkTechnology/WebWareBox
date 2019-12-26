@@ -1,0 +1,5 @@
+scripts/php/
+------------
+This is the scripts/php Directory. It contains all of the PHP Files that add certain Features and Functionality to the Software.
+
+NOTE: PLEASE ONLY PUT IN FILES ENDING WITH .php INTO THIS DIRECTORY.
