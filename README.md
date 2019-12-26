@@ -1,4 +1,4 @@
-# WebWareBoxV2
+# WebWareBox
 
 # NOTICE 
 This README is describing the main goals I have for this project from the beginning and will not be updated, while the documentation for WebWareBoxV2 will be on the Wiki section and will be updated regularly. The source code for the base project is not mine.
