@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "WebWare", "..\WebWareBox\WebWareBox\WebWare.phpproj", "{D7DDB171-2F08-4DA8-8526-5506215DC998}"
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "WebWare", "..\..\..\..\..\Users\willi\source\repos\WebWareBox\WebWareBox\WebWare.phpproj", "{D7DDB171-2F08-4DA8-8526-5506215DC998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
