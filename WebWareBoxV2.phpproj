@@ -1,0 +1,67 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>WebWareBoxV2</Name>
+    <ProjectGuid>{06bd08dc-2425-4c72-8273-77871320b794}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <ProjectHome />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".vs\WebWareBox\v16\.suo" />
+    <Compile Include=".vs\ProjectSettings.json" />
+    <Compile Include=".vs\slnx.sqlite" />
+    <Compile Include=".vs\VSWorkspaceState.json" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\scripts\js\js.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\scripts\php\php.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\scripts\scripts.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\box_icons.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\house.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\info.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\key.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\mail_small.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\register.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\rss.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1\software.png" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\about.css" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\contact.css" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\css.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\index.css" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\site.css" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css\software.css" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\assets\assets.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\core\core.txt" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\.gitignore" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\about.php" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\contact.php" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\index.php" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\LICENSE" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\software.php" />
+    <Compile Include="Current Version (WIP, BEING CONVERTED)\WebWare.phpproj" />
+    <Compile Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\WebWareBox\v16" />
+    <Folder Include=".vs\WebWareBox" />
+    <Folder Include=".vs\WebWareBoxV2\v16" />
+    <Folder Include=".vs\WebWareBoxV2" />
+    <Folder Include=".vs" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\scripts\js" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\scripts\php" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\scripts" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\theme\box_icons_v1" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\theme\css" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets\theme" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\assets" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)\core" />
+    <Folder Include="Current Version (WIP, BEING CONVERTED)" />
+  </ItemGroup>
+</Project>
