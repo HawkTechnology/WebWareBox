@@ -1,0 +1,16 @@
+/source/
+--------
+This is the /source/ Directory.
+
+In this Directory, all of the Source-Code Files are stored here. Alongside the Files, there are
+also other Directories for other things(Such as a Core-Directory for Core-Features).
+
+/source/ Diagram
+----------------
+
+WebWareBox/
+|
+|
+----/source/
+    | - Files
+    | - Files

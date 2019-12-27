@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>WebWareBox - Source</title>
+  </head>
+  <body>
+    <h1>Project Source-Code</h1>
+    <a href="https://www.github.com/williamdev/WebWareBox">
+      Source-Code can be found at https://www.github.com/williamdev/WebWareBox
+    </a>
+    <p>
+      <b>Project is Maintained by William Boycher(williamdev) and others on GitHub.</b><br>
+      <b>WebWareBox was originally developed by Daniel Fawkes(Fawkes-c).</b>
+    </p>
+  </body>
+</html>
