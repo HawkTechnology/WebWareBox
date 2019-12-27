@@ -1,7 +1,0 @@
-src/assets/
------------
-The src/assets Directory is where all of the Directories for Scripts and anything related to Themes are stored.
-
-This Directory links to multiple Sub-Directories. Please use the src.txt File found in src/ for a Diagram of the Directories.
-
-NOTE: ANYTHING RELATED TO JAVASCRIPT OR PHP SHOULD BE PUT IN assets/scripts/js OR assets/scripts/php. CSS FILES SHOULD BE PUT IN assets/theme/css/ AND ICONS SHOULD BE PUT INTO assets/theme/box_icons_v1.
