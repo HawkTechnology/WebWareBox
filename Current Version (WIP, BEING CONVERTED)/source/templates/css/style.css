@@ -1,0 +1,28 @@
+a.button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+
+    margin: auto;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background: #333;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 1s;
+    font-size: 40;
+}
+body{
+    font-family: sans-serif;
+}
+.Welcome_Container{
+    font-size: 40;
+    transition: all 1s;
+}
+#header{
+    font-size: 60;
+    text-align: center;
+}
