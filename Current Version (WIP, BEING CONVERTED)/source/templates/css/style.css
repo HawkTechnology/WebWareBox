@@ -28,11 +28,13 @@ a.button:hover, .button:hover{
 
 body{
     font-family: sans-serif;
+    transition: all 1s;
 }
 .Welcome_Container, .Login_Container, .Register_Container{  
     font-size: 25pt;
     transition: all 1s;
     text-align: center;
+    transition: all 1s;
 }
 #header{
     
@@ -46,9 +48,11 @@ body{
     border-radius: 25px;
     border: 1px solid #ccc;
     font-size: 20pt;
+    transition: all 1s;
     
 }
 .Source_Container{
     font-size: 16pt;
     text-align: center;
+    transition: all 1s;
 }
