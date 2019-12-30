@@ -1,4 +1,4 @@
-a.button{
+a.button, .button{
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
@@ -13,16 +13,42 @@ a.button{
     border-radius: 25px;
     cursor: pointer;
     transition: all 1s;
-    font-size: 40;
+    font-size: 30pt;
+    
 }
+a.button:hover, .button:hover{
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: all 1s;
+    font-size: 40;
+    transform: scale(1.05)
+    
+}
+
 body{
     font-family: sans-serif;
 }
-.Welcome_Container{
-    font-size: 40;
+.Welcome_Container, .Login_Container, .Register_Container{  
+    font-size: 25pt;
     transition: all 1s;
+    text-align: center;
 }
 #header{
-    font-size: 60;
+    
+    font-size: 30pt;
+    text-align: center;
+}
+#email, #password{
+    padding: 7px 1px;
+    margin: 3px 0;
+    max-width: 500px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 20pt;
+    
+}
+.Source_Container{
+    font-size: 16pt;
     text-align: center;
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebWareBox - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/login_register.js"></script>
+</head>
+<body>
+    <div class="Register_Container">
+        <h1 id="header">WebWareBox - Register</h1>
+        <p>Login here in order to upload files:</p>
+        <form>
+            <label for="Email">Email</label>
+            <br>
+            <input type="email" placeholder="Enter Email" id='email'>
+            <br>
+            <br>
+            <label for="Password">Password</label>
+            <br>
+            <input type="password" placeholder="Enter Password" id='password'>
+            <br>
+            <br>
+            <button class='button' type="submit" onclick="passto(document.getElementById('password').value, 
+            document.getElementById('email').value)">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>
