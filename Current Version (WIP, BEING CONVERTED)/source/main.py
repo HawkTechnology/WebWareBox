@@ -83,25 +83,6 @@ class AccountDB(db.Model):
         self.generated_password_hash = generated_password_hash
 
 
-
-
-def cookie_Check():
-    cookie = request.cookies.get('login_webwarebox')
-    if request.cookies.get('login_webwarebox'):
-        numswitch = 1
-        while (check_password_hash(cookie, numswitch) == False):
-            numswitch = numswitch + 1
-    
-    useridsearch = AccountDB.query.filter_by(id=numswitch).first()
-    loggedIn = True
-    currentuser = useridsearch.username
-
-    return redirect('/')
-def multithread(function):
-    t1 = threading.Thread(target=function) 
-    t1.start()
-    t1.join()   
-
 @app.route('/Source')
 def Source(name=None):
     return render_template("source.html", name=name)
@@ -157,14 +138,10 @@ def user_pass_login():
             error = "Error, username or password is incorrect"
             loggedIn = False
             return render_template('login.html', error=error)
-        elif (request.cookies.get('login_webwarebox')):
-            multithread(cookie_Check)
         elif (hashcheck == True):
                 flash('Logged in successfully')
                 loggedIn = True
                 currentuser = username_check_entry
-                res = make_response("Setting a cookie")
-                res.set_cookie('login_webwarebox', generate_password_hash(str(registered_user.id)), max_age=60*60*24*365*2)
                 return redirect('/')
         
 if __name__ == "__main__":
