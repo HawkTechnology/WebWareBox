@@ -24,8 +24,6 @@
 from flask import Flask, render_template, url_for, request, redirect, flash, make_response, abort, g
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
-from flask_login import LoginManager, login_user, logout_user, current_user , login_required  
-import threading
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///userpass.db'
 db = SQLAlchemy(app)
@@ -52,9 +50,6 @@ app.config['SECRET_KEY'] = 'b\xab\x86\x840V\n\xa7\xf2\x1d\xef\x81t\x86\xba\xc52^
 
      Thanks.
 """
-
-loggedIn = False
-currentuser = None
 class AccountDB(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True, nullable=False)
@@ -136,12 +131,9 @@ def user_pass_login():
             return render_template('login.html', error=error)
         elif (hashcheck == False):
             error = "Error, username or password is incorrect"
-            loggedIn = False
             return render_template('login.html', error=error)
         elif (hashcheck == True):
                 flash('Logged in successfully')
-                loggedIn = True
-                currentuser = username_check_entry
                 return redirect('/')
         
 if __name__ == "__main__":
