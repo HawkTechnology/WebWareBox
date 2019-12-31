@@ -31,20 +31,19 @@ body{
     transition: all 1s;
 }
 .Welcome_Container, .Login_Container, .Register_Container{  
-    font-size: 25pt;
+    font-size: 20pt;
     transition: all 1s;
     text-align: center;
     transition: all 1s;
 }
 #header{
     
-    font-size: 30pt;
+    font-size: 50pt;
     text-align: center;
 }
-#email, #password{
+input{
     padding: 7px 1px;
     margin: 3px 0;
-    max-width: 500px;
     border-radius: 25px;
     border: 1px solid #ccc;
     font-size: 20pt;

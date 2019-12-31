@@ -21,11 +21,16 @@
      you need help with anything. Find the Documentation for it here: https://flask.palletsprojects.com/en/1.1.x/
 """
 
-from flask import Flask # Import the Flask Framework
-from flask import render_template # This Module gives us the ability to render HTML.
-
-Application = Flask(__name__)
-
+from flask import Flask, render_template, url_for, request, redirect, flash, make_response, abort, g
+from flask_sqlalchemy import SQLAlchemy 
+from datetime import datetime
+from flask_login import LoginManager, login_user, logout_user, current_user , login_required  
+import threading
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///userpass.db'
+db = SQLAlchemy(app)
+from werkzeug.security import check_password_hash, generate_password_hash
+app.config['SECRET_KEY'] = 'b\xab\x86\x840V\n\xa7\xf2\x1d\xef\x81t\x86\xba\xc52^jdB:3\xbe\x07'
 """
      This part of main.py revolves around Page-Redirection.
      
@@ -47,26 +52,121 @@ Application = Flask(__name__)
 
      Thanks.
 """
-@Application.route('/')
-def Home(name=None):
-    return render_template("index.html", name=name)
+
+loggedIn = False
+currentuser = None
+class AccountDB(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(120), unique=True, nullable=False)
+    generated_password_hash = db.Column(db.String(80), unique=True, nullable=False)
+
+    def is_authenticated(self):
+        return True
+ 
+    def is_active(self):
+        return True
+ 
+    def is_anonymous(self):
+        return False
+ 
+    def get_id(self):
+        return str(self.id)
+
+    def __repr__(self):
+        return '<AccountDB %r>' % self.username
+
+
+    def __init__(self, username, generated_password_hash, is_author=False):
+ 
+        self.username = username
+
+        self.generated_password_hash = generated_password_hash
+
+
+
+
+def cookie_Check():
+    cookie = request.cookies.get('login_webwarebox')
+    if request.cookies.get('login_webwarebox'):
+        numswitch = 1
+        while (check_password_hash(cookie, numswitch) == False):
+            numswitch = numswitch + 1
     
-@Application.route('/Source')
+    useridsearch = AccountDB.query.filter_by(id=numswitch).first()
+    loggedIn = True
+    currentuser = useridsearch.username
+
+    return redirect('/')
+def multithread(function):
+    t1 = threading.Thread(target=function) 
+    t1.start()
+    t1.join()   
+
+@app.route('/Source')
 def Source(name=None):
     return render_template("source.html", name=name)
 
-@Application.route('/Software')
+@app.route('/Software')
 def Software(name=None):
     return render_template("software.html", name=name)
 
-@Application.route('/Upload')
+@app.route('/Upload')
 def Upload(name=None):
     return render_template("upload.html", name=name)
 
-@Application.route('/Login')
+@app.route('/Login')
 def Login(name=None):
+    
     return render_template("login.html", name=name)
 
-@Application.route('/Register')
+@app.route('/Register')
 def Register(name=None):
     return render_template("register.html", name=name)
+
+
+@app.route('/', methods=['GET', 'POST'])
+def Home(name=None):
+    return render_template("index.html", name=name)
+
+@app.route('/user_pass_register', methods=['GET', 'POST'])
+def user_pass_register():
+    if request.method == 'POST':
+        password_entry = request.form['passwordform']
+        username_entry = request.form['usernameform']
+        hash_pwd = generate_password_hash(password_entry)
+        new = AccountDB(username_entry, hash_pwd)
+        db.session.add(new)
+        db.session.commit()
+        if(new.id > 0):
+            return redirect('/Login')
+        else:
+            return "An Issue Occured"
+
+@app.route('/user_pass_login', methods=['GET', 'POST'])
+def user_pass_login():
+    error = None
+    if request.method == 'POST':
+        password_check_entry = request.form['passwordform']
+        username_check_entry = request.form['usernameform']
+        registered_user = AccountDB.query.filter_by(username=username_check_entry).first()
+        hashcheck = check_password_hash(registered_user.generated_password_hash, password_check_entry)
+        if (registered_user == None):
+            error = "Error, username or password is incorrect"
+            return render_template('login.html', error=error)
+        elif (hashcheck == False):
+            error = "Error, username or password is incorrect"
+            loggedIn = False
+            return render_template('login.html', error=error)
+        elif (request.cookies.get('login_webwarebox')):
+            multithread(cookie_Check)
+        elif (hashcheck == True):
+                flash('Logged in successfully')
+                loggedIn = True
+                currentuser = username_check_entry
+                res = make_response("Setting a cookie")
+                res.set_cookie('login_webwarebox', generate_password_hash(str(registered_user.id)), max_age=60*60*24*365*2)
+                return redirect('/')
+        
+if __name__ == "__main__":
+    app.run(debug=True)
+
